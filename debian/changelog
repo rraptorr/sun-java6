@@ -1,8 +1,10 @@
 sun-java6 (6.30-3) unstable; urgency=low
 
   * Detect Java version from changelog instead of directory name
+  * Set proper (lower) priority for ia32-java-6-sun
+  * Update link for JCE Unlimited Strength Jurisdiction Policy Files
 
- -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Fri, 13 Jan 2012 17:58:31 +0100
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Mon, 16 Jan 2012 11:29:01 +0100
 
 sun-java6 (6.30-2) unstable; urgency=low
 
