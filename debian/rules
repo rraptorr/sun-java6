@@ -735,6 +735,9 @@ binary-$(p_jdk):	build
 	cp -p debian/$(p_jdk).overrides \
 		$(d_jdk)/$(lintian_overrides)/$(p_jdk)
 
+	: # fix permissions
+	chmod 755 $(d_jdk)/$(basedir)/lib/visualvm/platform/lib/nbexec
+
 ifneq (,$(findstring demo, $(NO_PACKAGES)))
 	cp -a $(srcdir)/demo $(d_jdk)/usr/share/doc/$(p_jdk)/
 	cp -a $(srcdir)/sample $(d_jdk)/usr/share/doc/$(p_jdk)/examples
@@ -784,9 +787,6 @@ binary-$(p_demo):	build
 	cp -a $(srcdir)/sample $(d_demo)/usr/share/doc/$(p_jdk)/examples
 	mv $(d_demo)/usr/share/doc/$(p_jdk)/demo/jvmti \
 	  $(d_demo)/$(basedir)/demo/
-
-	: # fix permissions
-	chmod 755 $(d_demo)/usr/share/doc/$(p_jdk)/examples/scripting/scriptpad/src/scripts/memory.sh
 
 	echo usr/share/doc/$(p_jdk)/examples $(basedir)/sample > $(d_demo).links
 	for i in $(srcdir)/demo/*; do \

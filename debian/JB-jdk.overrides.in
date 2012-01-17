@@ -2,3 +2,4 @@
 @basename@-jdk: shlib-without-PT_GNU_STACK-section @basedir@/lib/*
 @basename@-jdk: unstripped-binary-or-object @basedir@/bin/*
 @basename@-jdk: unstripped-binary-or-object @basedir@/lib/*
+@basename@-jdk: menu-icon-missing usr/share/pixmaps/sun-java6.xpm
