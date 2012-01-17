@@ -738,18 +738,6 @@ binary-$(p_jdk):	build
 	: # fix permissions
 	chmod 755 $(d_jdk)/$(basedir)/lib/visualvm/platform/lib/nbexec
 
-ifneq (,$(findstring demo, $(NO_PACKAGES)))
-	cp -a $(srcdir)/demo $(d_jdk)/usr/share/doc/$(p_jdk)/
-	cp -a $(srcdir)/sample $(d_jdk)/usr/share/doc/$(p_jdk)/examples
-
-	echo usr/share/doc/$(p_jdk)/demo $(basedir)/demo >> $(d_jdk).links
-	echo usr/share/doc/$(p_jdk)/examples $(basedir)/sample >> $(d_jdk).links
-
-	: # add lintian overrides
-	cat debian/$(p_demo).overrides \
-		>> $(d_jdk)/usr/share/lintian/overrides/$(p_jdk)
-endif
-
 	for m in $$(find $(srcdir)/man/man1 -type f); do \
 	  n=$$(basename $$m .1); \
 	  case " $(jre_tools) $(corba_tools) " in *\ $$n\ *) continue; esac; \
