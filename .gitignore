@@ -37,3 +37,4 @@ debian/*.links
 debian/*.desktop
 debian/*.defoma-hints
 debian/*.doc-base
+debian/*.tmp

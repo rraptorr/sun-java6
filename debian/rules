@@ -283,10 +283,7 @@ compare-jre-jars:
 diff_ignore = -I 'Thursday, November 10' \
 	-I 'Thu Nov 10' -I '^ *// java GenerateCharacter'
 
-with_check = yes
-
 unpack-stamp: $(foreach a, $(all_archs), unpack-$(a)-stamp)
-ifeq ($(with_check),yes)
 	: # check for identical files / trees
 	set -e; set -- $(all_archs); a1=$$1; shift; \
 	for a2; do \
@@ -297,7 +294,7 @@ ifeq ($(with_check),yes)
 	      echo "    OK"; \
 	    else \
 	      echo "    differ"; \
-	      badjars="$$badthings $$i"; \
+	      badthings="$$badthings $$i"; \
 	    fi; \
 	  done; \
 	done; \
@@ -341,7 +338,6 @@ ifeq ($(with_check),yes)
 	done
 
 	@echo No relevant differences
-endif
 	touch unpack-stamp
 
 unpack-amd64-stamp: unpack-i586-stamp
