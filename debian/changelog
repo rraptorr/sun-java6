@@ -5,8 +5,9 @@ sun-java6 (6.30-3) unstable; urgency=low
   * Update link for JCE Unlimited Strength Jurisdiction Policy Files
   * Add Homepage to control file
   * Update list of common JRE things
+  * Replace sun-java6-app.xpm with sun-java6.xpm
 
- -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 18 Jan 2012 11:58:36 +0100
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 18 Jan 2012 13:45:07 +0100
 
 sun-java6 (6.30-2) unstable; urgency=low
 

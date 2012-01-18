@@ -23,6 +23,13 @@ them to the newest Java 6 and I've removed licensing stuff (since it
 does not apply anymore) and some obsolete code from rules. For details
 of changes see 'changelog' file.
 
+I do not have resources to test packages on Ubuntu. However, if one
+finds any problem on Ubuntu, feel free to report an issue and I will
+try to resolve it.
+
+For automated solution Ubuntu users can use:
+https://github.com/flexiondotorg/oab-java6
+
 3. Usage
 
 To create packages on your own:
