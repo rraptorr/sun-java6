@@ -779,9 +779,6 @@ binary-$(p_demo):	build
 	done
 	echo $(basedir)/demo/jvmti usr/share/doc/$(p_jdk)/demo/jvmti >> $(d_demo).links
 
-	cp -p debian/sun_java_app.xpm \
-		$(d_demo)/usr/share/pixmaps/$(basename)-app.xpm
-
 	: # add lintian overrides
 	cp -p debian/$(p_demo).overrides \
 		$(d_demo)/$(lintian_overrides)/$(p_demo)
