@@ -4,8 +4,9 @@ sun-java6 (6.30-3) unstable; urgency=low
   * Set proper (lower) priority for ia32-java-6-sun
   * Update link for JCE Unlimited Strength Jurisdiction Policy Files
   * Add Homepage to control file
+  * Update list of common JRE things
 
- -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 18 Jan 2012 11:57:59 +0100
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 18 Jan 2012 11:58:36 +0100
 
 sun-java6 (6.30-2) unstable; urgency=low
 
