@@ -1,3 +1,9 @@
+sun-java6 (6.30-4) unstable; urgency=low
+
+  * Fix lintian source package warnings
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 31 Jan 2012 06:37:37 +0100
+
 sun-java6 (6.30-3) unstable; urgency=low
 
   * Detect Java version from changelog instead of directory name
