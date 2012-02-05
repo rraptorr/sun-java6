@@ -1,9 +1,10 @@
 sun-java6 (6.30-4) unstable; urgency=low
 
   * Fix lintian source package warnings
-  * Update debhelper compatibility level to 7
+  * Update debhelper compatibility level to 6
+  * Update java-common dependency to 0.28
 
- -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 01 Feb 2012 20:21:32 +0000
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Fri, 03 Feb 2012 09:50:01 +0100
 
 sun-java6 (6.30-3) unstable; urgency=low
 
