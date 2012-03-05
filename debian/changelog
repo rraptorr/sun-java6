@@ -1,8 +1,9 @@
 sun-java6 (6.31-2) unstable; urgency=low
 
   * Remove obsolete dependency information
+  * Remove obsolete Ubuntu rules
 
- -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Mon, 05 Mar 2012 22:36:09 +0100
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Mon, 05 Mar 2012 23:21:30 +0100
 
 sun-java6 (6.31-1) unstable; urgency=high
 

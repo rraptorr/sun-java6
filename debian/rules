@@ -60,7 +60,7 @@ endif
 
 java_launcher = /$(basedir)/bin/java
 ifeq ($(distribution),Ubuntu)
-  ifeq (,$(filter $(distrel),karmic jaunty intrepid hardy gutsy feisty edgy dapper))
+  ifeq (,$(filter $(distrel),hardy))
     java_launcher = cautious-launcher %f /$(basedir)/bin/java
   endif
 endif
@@ -209,7 +209,6 @@ debian/control: debian/control.in debian/rules
 	      -e 's/@cjk_fonts@/$(cjk_fonts)/g' \
 	      -e 's/@jdkversion@/$(jdkversion)/g' \
 	      -e 's/@releng_ver@/$(releng_ver)/g' \
-	      -e 's,@pkg_version@,$(if $(filter $(distrelease),etch dapper edgy feisty gutsy),$${Source-Version},$${source:Version}),g' \
 	    debian/control.in > debian/control
 	@if cmp -s debian/control debian/control.old; then \
 	  rm -f debian/control.old; \
