@@ -14,7 +14,6 @@ Depends: java-common (>= 0.28), locales, @basename@-bin (>= @pkg_version@) | ia3
 Recommends: gsfonts-x11
 Suggests: @basename@-plugin, @basename@-fonts, @cjk_fonts@
 Replaces: @basename@-bin, ia32-@basename@-bin
-Conflicts: j2se-common
 Description: @vendor@ Java(TM) Runtime Environment (JRE) @RELEASE@ (architecture independent files)
  The @vendor@ Java Platform Standard Edition Runtime Environment (JRE) @RELEASE@
  contains the Java virtual machine, runtime class libraries, and 
@@ -32,7 +31,6 @@ Architecture: amd64 i386
 Depends: @basename@-jre (>= @pkg_version@), ${odbc:Depends}, ${shlibs:Depends}, ${misc:Depends}
 Recommends: ${shlibs:Recommends}
 Suggests: binfmt-support
-Conflicts: binfmt-support (<< 1.1.2)
 Description: @vendor@ Java(TM) Runtime Environment (JRE) @RELEASE@ (architecture dependent files)
  The @vendor@ Java Platform Standard Edition Runtime Environment (JRE) @RELEASE@
  contains the Java virtual machine, runtime class libraries, and 
@@ -114,8 +112,6 @@ Description: @vendor@ Java(TM) Development Kit (JDK) @RELEASE@ demos and example
 Package: @basename@-source
 Architecture: all
 Depends: @basename@-jdk (>= @pkg_version@), ${misc:Depends}
-Conflicts: @basename@-src
-Replaces: @basename@-src
 Description: @vendor@ Java(TM) Development Kit (JDK) @RELEASE@ source files
  The JDK(TM) is a development environment for building applications, 
  applets, and components using the Java programming language.

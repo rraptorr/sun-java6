@@ -14,7 +14,6 @@ Depends: java-common (>= 0.28), locales, sun-java6-bin (>= ${source:Version}) | 
 Recommends: gsfonts-x11
 Suggests: sun-java6-plugin, sun-java6-fonts, ttf-baekmuk | ttf-unfonts | ttf-unfonts-core, ttf-kochi-gothic | ttf-sazanami-gothic, ttf-kochi-mincho | ttf-sazanami-mincho, ttf-arphic-uming,
 Replaces: sun-java6-bin, ia32-sun-java6-bin
-Conflicts: j2se-common
 Description: Sun Java(TM) Runtime Environment (JRE) 6 (architecture independent files)
  The Sun Java Platform Standard Edition Runtime Environment (JRE) 6
  contains the Java virtual machine, runtime class libraries, and 
@@ -32,7 +31,6 @@ Architecture: amd64 i386
 Depends: sun-java6-jre (>= ${source:Version}), ${odbc:Depends}, ${shlibs:Depends}, ${misc:Depends}
 Recommends: ${shlibs:Recommends}
 Suggests: binfmt-support
-Conflicts: binfmt-support (<< 1.1.2)
 Description: Sun Java(TM) Runtime Environment (JRE) 6 (architecture dependent files)
  The Sun Java Platform Standard Edition Runtime Environment (JRE) 6
  contains the Java virtual machine, runtime class libraries, and 
@@ -114,8 +112,6 @@ Description: Sun Java(TM) Development Kit (JDK) 6 demos and examples
 Package: sun-java6-source
 Architecture: all
 Depends: sun-java6-jdk (>= ${source:Version}), ${misc:Depends}
-Conflicts: sun-java6-src
-Replaces: sun-java6-src
 Description: Sun Java(TM) Development Kit (JDK) 6 source files
  The JDK(TM) is a development environment for building applications, 
  applets, and components using the Java programming language.
