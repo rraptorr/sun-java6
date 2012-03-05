@@ -12,7 +12,7 @@ Architecture: all
 Provides: java-virtual-machine, java-runtime, java2-runtime, java5-runtime, java6-runtime, java-runtime-headless, java2-runtime-headless, java5-runtime-headless, java6-runtime-headless
 Depends: java-common (>= 0.28), locales, sun-java6-bin (>= ${source:Version}) | ia32-sun-java6-bin (>= ${source:Version}), ${misc:Depends}
 Recommends: gsfonts-x11
-Suggests: sun-java6-plugin, sun-java6-fonts, ttf-baekmuk | ttf-unfonts | ttf-unfonts-core, ttf-kochi-gothic | ttf-sazanami-gothic, ttf-kochi-mincho | ttf-sazanami-mincho, ttf-arphic-uming,
+Suggests: sun-java6-plugin, sun-java6-fonts, ttf-baekmuk | ttf-unfonts-core, ttf-kochi-gothic | ttf-sazanami-gothic, ttf-kochi-mincho | ttf-sazanami-mincho, ttf-arphic-uming,
 Replaces: sun-java6-bin, ia32-sun-java6-bin
 Description: Sun Java(TM) Runtime Environment (JRE) 6 (architecture independent files)
  The Sun Java Platform Standard Edition Runtime Environment (JRE) 6
