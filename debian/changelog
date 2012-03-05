@@ -2,8 +2,9 @@ sun-java6 (6.31-2) unstable; urgency=low
 
   * Remove obsolete dependency information
   * Remove obsolete Ubuntu rules
+  * Standards-Version updated to version 3.9.3
 
- -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Mon, 05 Mar 2012 23:21:30 +0100
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Mon, 05 Mar 2012 22:54:38 +0000
 
 sun-java6 (6.31-1) unstable; urgency=high
 
