@@ -857,7 +857,7 @@ binary-arch:	$(binary_arch_targets)
 	dh_testroot
 	dh_installmime
 	dh_installmenu
-	dh_icons || dh_iconcache || true
+	dh_icons
 	dh_link
 	: # don't compress anything from the shipped demo and sample files
 	dh_compress -Xdemo -Xexamples -Xsample -X.html -X.pdf
