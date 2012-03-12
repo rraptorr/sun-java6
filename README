@@ -18,10 +18,13 @@ So far packages were tested on following Debian versions:
 - squeeze i386/amd64
 - lenny i386/amd64
 
-Packages are compatible with "official" Debian ones. I've only adapted
-them to the newest Java 6 and I've removed licensing stuff (since it
-does not apply anymore) and some obsolete code from rules. For details
-of changes see 'changelog' file.
+New users of Debian Wheezy should cosider using java-package:
+http://wiki.debian.org/JavaPackage
+
+Packages are compatible with the "official" Debian ones. However, I've
+removed a lot of obsolete code (dating back to etch), licensing stuff
+(since it does not apply anymore) and made general cleanups. For
+details of changes see 'changelog' file.
 
 I do not have resources to test packages on Ubuntu. However, if one
 finds any problem on Ubuntu, feel free to report an issue and I will
@@ -39,7 +42,7 @@ To create packages on your own:
 - Download jdk-6u31-linux-i586.bin and jdk-6u31-linux-x64.bin from
   http://www.oracle.com/technetwork/java/javase/downloads/index.html
   (yes, both, no matter which version you will run)
-- dpkg-buildpackage -b
+- dpkg-buildpackage -b -uc -us
 - install any missing packages that dpkg-buildpackage complains about
   and repeat
 
