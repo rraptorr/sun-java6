@@ -4,8 +4,10 @@ sun-java6 (6.31-2) unstable; urgency=low
   * Remove obsolete Ubuntu rules
   * Standards-Version updated to version 3.9.3
   * Change location of Lucida fonts
+  * Remove unused rules targets and variables
+  * Bring back shlibs:Depends in plugin
 
- -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 13 Mar 2012 00:16:38 +0100
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 13 Mar 2012 00:45:48 +0100
 
 sun-java6 (6.31-1) unstable; urgency=high
 
