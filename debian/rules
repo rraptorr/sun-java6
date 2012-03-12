@@ -670,11 +670,11 @@ binary-$(p_fonts):	build
 	dh_clean -d
 	dh_installdirs \
 		usr/share/doc \
-		usr/share/fonts/truetype/ttf-lucida
+		usr/share/fonts/truetype/lucida
 
 	cd $(srcdir) && \
 	for f in jre/lib/*fonts/*.ttf; do \
-	  echo $(basedir)/$$f usr/share/fonts/truetype/ttf-lucida/$$(basename $$f); \
+	  echo $(basedir)/$$f usr/share/fonts/truetype/lucida/$$(basename $$f); \
 	done >> $(CURDIR)/$(d_fonts).links
 
 	dh_installdefoma

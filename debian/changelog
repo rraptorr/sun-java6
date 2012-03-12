@@ -3,8 +3,9 @@ sun-java6 (6.31-2) unstable; urgency=low
   * Remove obsolete dependency information
   * Remove obsolete Ubuntu rules
   * Standards-Version updated to version 3.9.3
+  * Change location of Lucida fonts
 
- -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Mon, 05 Mar 2012 22:54:38 +0000
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 13 Mar 2012 00:16:38 +0100
 
 sun-java6 (6.31-1) unstable; urgency=high
 
