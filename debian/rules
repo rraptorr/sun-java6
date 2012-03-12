@@ -545,10 +545,10 @@ endif
 	find $(d_jbin) -name '*.xml' | xargs -r chmod 644
 
 	rm -f $(d_jbin).substvars
-	ld_path=$(d_jbin)/$(basedir)/jre/lib/$(archdir) \
-	    dh_shlibdeps \
-		-l$$ld_path:$$ld_path/client:$$ld_path/native_threads \
-		-Xlibjavaplugin_oji.so -Xlibnpjp2.so
+	dh_shlibdeps \
+		-l$(basedir)/jre/lib/$(archdir)/server \
+		-Xlibjavaplugin_oji.so -Xlibnpjp2.so \
+		-- --warnings=0
 
 	sed -i -e 's/libc6[^,]*, *//g' -e 's/libc6[^,]*$$//g' -e 's/ *([^,]*) *//g' \
 		$(d_jbin).substvars
@@ -556,13 +556,13 @@ endif
 	sed -e 's/Depends/Recommends/' \
 		$(d_jbin).substvars > $(d_jbin).substvars.tmp
 	rm -f debian/$(p_jbin).substvars
-	ld_path=$(d_jbin)/$(basedir)/jre/lib/$(archdir) \
-	    dh_shlibdeps \
-		-l$$ld_path:$$ld_path/client:$$ld_path/native_threads:$$ld_path/headless \
+	dh_shlibdeps \
+		-l$(basedir)/jre/lib/$(archdir)/server \
 		-Xjavaws -Xpolicytool \
 		-Xlibjavaplugin -Xlibawt -Xlibjawt -Xlibmawt -Xlibdcpr \
 		-Xlibfontmanager -Xlibjsoundalsa  -X_g.so \
-		-Xlibsplashscreen -Xlibmlib -Xlibdeploy
+		-Xlibsplashscreen -Xlibmlib -Xlibdeploy \
+		-- --warnings=0
 	sed -i -e 's/ *([^,]*) *//g' $(d_jbin).substvars
 	cat $(d_jbin).substvars.tmp >> $(d_jbin).substvars
 ifeq (,$(ia32_prefix))
@@ -730,10 +730,10 @@ binary-$(p_jdk):	build
 	done
 	-find $(d_jdk)/$(basedir)/man -name '*.[1-9]' | xargs gzip
 
-	ld_path=$(d_jbin)/$(basedir)/jre/lib/$(archdir) \
-	    dh_shlibdeps \
-	-l$$ld_path:$$ld_path/client:$$ld_path/native_threads:$$ld_path/headless \
-		-Xlibjavaplugin_oji.so Xlibnpjp2.so -X_g.so
+	dh_shlibdeps \
+		-L$(p_jbin) \
+		-l$(basedir)/jre/lib/$(archdir)/server \
+		-- --warnings=0
 
 	sed -i -e 's/ *([^,]*) *//g' $(d_jdk).substvars
 
@@ -770,8 +770,7 @@ binary-$(p_demo):	build
 	cp -p debian/$(p_demo).overrides \
 		$(d_demo)/$(lintian_overrides)/$(p_demo)
 
-	ld_path=$(d_jbin)/$(basedir)/jre/lib/$(archdir) \
-	    dh_shlibdeps \
+	dh_shlibdeps -- --warnings=0
 
 	echo usr/share/doc/$(p_jdk) usr/share/doc/$(p_demo) >> $(d_demo).links
 
