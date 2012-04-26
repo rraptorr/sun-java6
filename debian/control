@@ -49,7 +49,7 @@ Priority: optional
 Depends: ${shlibs:Depends}, ${misc:Depends}, sun-java6-bin (>= ${source:Version}), firefox | firefox-2 | iceweasel | mozilla-firefox | iceape-browser | mozilla-browser | epiphany-gecko | epiphany-webkit | epiphany-browser | galeon | midbrowser | moblin-web-browser | xulrunner | xulrunner-1.9 | konqueror | chromium-browser | midori | google-chrome
 Xb-Npp-Applications: ec8030f7-c20a-464f-9b0e-13a3a9e97384, 92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a 
 Xb-Npp-Name: The Java(TM) Plug-in, Java SE 6
-Xb-Npp-MimeType: application/x-java-vm, application/x-java-applet, application/x-java-applet;version=1.1, application/x-java-applet;version=1.1.1, application/x-java-applet;version=1.1.2, application/x-java-applet;version=1.1.3, application/x-java-applet;version=1.2, application/x-java-applet;version=1.2.1, application/x-java-applet;version=1.2.2, application/x-java-applet;version=1.3, application/x-java-applet;version=1.3.1, application/x-java-applet;version=1.4, application/x-java-applet;version=1.4.1, application/x-java-applet;version=1.4.2, application/x-java-applet;version=1.5, application/x-java-applet;version=1.6, application/x-java-applet;jpi-version=1.6.0_31, application/x-java-bean, application/x-java-bean;version=1.1, application/x-java-bean;version=1.1.1, application/x-java-bean;version=1.1.2, application/x-java-bean;version=1.1.3, application/x-java-bean;version=1.2, application/x-java-bean;version=1.2.1, application/x-java-bean;version=1.2.2, application/x-java-bean;version=1.3, application/x-java-bean;version=1.3.1, application/x-java-bean;version=1.4, application/x-java-bean;version=1.4.1, application/x-java-bean;version=1.4.2, application/x-java-bean;version=1.5, application/x-java-bean;version=1.6, application/x-java-bean;jpi-version=1.6.0_31, application/x-java-vm-npruntime
+Xb-Npp-MimeType: application/x-java-vm, application/x-java-applet, application/x-java-applet;version=1.1, application/x-java-applet;version=1.1.1, application/x-java-applet;version=1.1.2, application/x-java-applet;version=1.1.3, application/x-java-applet;version=1.2, application/x-java-applet;version=1.2.1, application/x-java-applet;version=1.2.2, application/x-java-applet;version=1.3, application/x-java-applet;version=1.3.1, application/x-java-applet;version=1.4, application/x-java-applet;version=1.4.1, application/x-java-applet;version=1.4.2, application/x-java-applet;version=1.5, application/x-java-applet;version=1.6, application/x-java-applet;jpi-version=1.6.0_32, application/x-java-bean, application/x-java-bean;version=1.1, application/x-java-bean;version=1.1.1, application/x-java-bean;version=1.1.2, application/x-java-bean;version=1.1.3, application/x-java-bean;version=1.2, application/x-java-bean;version=1.2.1, application/x-java-bean;version=1.2.2, application/x-java-bean;version=1.3, application/x-java-bean;version=1.3.1, application/x-java-bean;version=1.4, application/x-java-bean;version=1.4.1, application/x-java-bean;version=1.4.2, application/x-java-bean;version=1.5, application/x-java-bean;version=1.6, application/x-java-bean;jpi-version=1.6.0_32, application/x-java-vm-npruntime
 Description: Java(TM) Plug-in, Java SE 6
  Java Plug-in enables applets written to the Java Platform 6 
  specification to be run in Mozilla and other web browsers. 
@@ -87,7 +87,7 @@ Description: Lucida TrueType fonts (from the Sun JRE)
 Package: sun-java6-jdk
 Architecture: amd64 i386
 Depends: sun-java6-bin (>= ${source:Version}), ${shlibs:Depends}, ${misc:Depends}
-Suggests: sun-java6-demo, default-jdk-doc, sun-java6-source
+Suggests: default-jdk-doc, sun-java6-source
 Provides: java-compiler, java2-compiler, java-sdk, java2-sdk, java5-sdk, java6-sdk
 Description: Sun Java(TM) Development Kit (JDK) 6
  The JDK(TM) is a development environment for building applications, 
@@ -96,18 +96,6 @@ Description: Sun Java(TM) Development Kit (JDK) 6
  The JDK includes tools useful for developing and testing programs 
  written in the Java programming language and running on the Java 
  Platform.
-
-Package: sun-java6-demo
-Architecture: amd64 i386
-Depends: sun-java6-jre (>= ${source:Version}), sun-java6-jdk (>= ${source:Version}), ${shlibs:Depends}, ${misc:Depends}
-Replaces: sun-java6-jdk
-Enhances: sun-java6-jdk
-Suggests: default-jdk-doc
-Description: Sun Java(TM) Development Kit (JDK) 6 demos and examples
- The JDK(TM) is a development environment for building applications, 
- applets, and components using the Java programming language.
- .
- This package contains the examples and demonstration files.
 
 Package: sun-java6-source
 Architecture: all

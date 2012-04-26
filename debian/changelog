@@ -1,3 +1,10 @@
+sun-java6 (6.32-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove demo package as it was split from upstream
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Thu, 26 Apr 2012 22:00:14 +0000
+
 sun-java6 (6.31-2) unstable; urgency=low
 
   * Remove obsolete dependency information
