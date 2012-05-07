@@ -2,7 +2,7 @@
 
 Due to licensing problems Java 6 was recently removed from Debian
 testing and Debian stable/oldstable was stuck with Java 6u26. Given
-security updates in later Java versions, this is leaves no choice, but
+security updates in later Java versions, this leaves no choice, but
 manual Java update (OpenJDK not being an alternative for many).
 
 I didn't like the idea of installing Java by hand on my Debian
