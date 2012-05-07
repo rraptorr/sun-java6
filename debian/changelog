@@ -1,8 +1,9 @@
 sun-java6 (6.32-2) unstable; urgency=low
 
   * Fix rules on certain locales (i.e. et_EE)
+  * Remove defoma stuff
 
- -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 01 May 2012 17:05:45 +0000
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Mon, 07 May 2012 14:00:37 +0200
 
 sun-java6 (6.32-1) unstable; urgency=low
 

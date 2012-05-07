@@ -3,7 +3,7 @@ Section: non-free/java
 Priority: optional
 Maintainer: Janusz Dziemidowicz <rraptorr@nails.eu.org>
 Homepage: http://www.oracle.com/technetwork/java/javase/downloads/index.html
-Build-Depends: debhelper (>= 6), lsb-release, defoma, unzip, bzip2, patch, libasound2, unixodbc, libx11-6, libxext6, libxi6, libxt6, libxtst6, lib32asound2 [amd64], ia32-libs [amd64]
+Build-Depends: debhelper (>= 6), lsb-release, unzip, bzip2, patch, libasound2, unixodbc, libx11-6, libxext6, libxi6, libxt6, libxtst6, lib32asound2 [amd64], ia32-libs [amd64]
 Standards-Version: 3.9.3
 
 Package: sun-java6-jre
@@ -77,12 +77,12 @@ Description: Sun Java(TM) Runtime Environment (JRE) 6 (32-bit)
 Package: sun-java6-fonts
 Section: non-free/fonts
 Architecture: all
-Depends: sun-java6-jre (>= ${source:Version}), defoma, ${misc:Depends}
+Depends: sun-java6-jre (>= ${source:Version}), ${misc:Depends}
 Provides: ttf-lucida
 Conflicts: ttf-lucida
 Description: Lucida TrueType fonts (from the Sun JRE)
  The Lucida fonts are included in the sun-java6-jre package.
- This package makes the fonts available to defoma.
+ This package makes the fonts available to system.
 
 Package: sun-java6-jdk
 Architecture: amd64 i386
