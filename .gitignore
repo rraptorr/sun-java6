@@ -1,9 +1,11 @@
 jdk-*-linux-*.bin
+jce_policy-*.zip
 i586-jdk
 x64-jdk
 tmp-i586
 tmp-x64
 tmp-jdk.zip
+jce
 
 debian/JAVA_HOME
 debian/README.alternatives

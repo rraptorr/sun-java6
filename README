@@ -42,6 +42,8 @@ To create packages on your own:
 - Download jdk-6u32-linux-i586.bin and jdk-6u32-linux-x64.bin from
   http://www.oracle.com/technetwork/java/javase/downloads/index.html
   (yes, both, no matter which version you will run)
+- Download jce_policy-6.zip from the same page under "Java Cryptography
+  Extension (JCE) Unlimited Strength Jurisdiction Policy Files 6"
 - dpkg-buildpackage -b -uc -us
 - install any missing packages that dpkg-buildpackage complains about
   and repeat
