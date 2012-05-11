@@ -42,7 +42,7 @@ To create packages on your own:
 - Download jdk-6u32-linux-i586.bin and jdk-6u32-linux-x64.bin from
   http://www.oracle.com/technetwork/java/javase/downloads/index.html
   (yes, both, no matter which version you will run)
-- dpkg-buildpackage -b -uc -us
+- dpkg-buildpackage -uc -us
 - install any missing packages that dpkg-buildpackage complains about
   and repeat
 
