@@ -1,3 +1,10 @@
+sun-java6 (6.32-3) unstable; urgency=low
+
+  * Add JCE Unlimited Strength Jurisdiction Policy Files
+  * Set source format to "3.0 (native)"
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Fri, 11 May 2012 21:11:07 +0000
+
 sun-java6 (6.32-2) unstable; urgency=low
 
   * Fix rules on certain locales (i.e. et_EE)
