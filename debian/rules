@@ -274,8 +274,8 @@ compare-jre-jars:
 	  exit 1; \
 	fi
 
-diff_ignore = -I 'Thursday, April 5' \
-	-I 'Thu Apr 05' -I '^ *// java GenerateCharacter'
+diff_ignore = -I 'Wednesday, May 9' \
+	-I 'Wed May 09' -I '^ *// java GenerateCharacter'
 
 unpack-stamp: $(foreach a, $(all_archs), unpack-$(a)-stamp) unpack-jce-stamp
 	: # check for identical files / trees

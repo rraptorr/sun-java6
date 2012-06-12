@@ -1,9 +1,24 @@
-sun-java6 (6.32-3) unstable; urgency=low
+sun-java6 (6.33-1) unstable; urgency=high
 
   * Add JCE Unlimited Strength Jurisdiction Policy Files
   * Set source format to "3.0 (native)"
+  * SECURITY UPDATE: multiple upstream vulnerabilities. Upstream fixes:
+     - (CVE-2012-1713): fontmanager layout lookup code memory corruption (2D)
+     - (CVE-2012-1721): unspecified vulnerability fixed in 6u33 (Deployment)
+     - (CVE-2012-1722): unspecified vulnerability fixed in 6u33 (Deployment)
+     - (CVE-2012-1723): insufficient field accessibility checks (Hotspot)
+     - (CVE-2012-1725): insufficient invokespecial <init> verification (Hotspot)
+     - (CVE-2012-1716): SynthLookAndFeel application context bypass (Swing)
+     - (CVE-2012-1711): improper protection of CORBA data models (CORBA)
+     - (CVE-2012-0551): unspecified vulnerability fixed in 6u33 (Deployment)
+     - (CVE-2012-1719): mutable repository identifiers in generated stub code
+	                (CORBA)
+     - (CVE-2012-1724): XML parsing infinite loop (JAXP)
+     - (CVE-2012-1718): unspecified vulnerability fixed in 6u33 (Security)
+     - (CVE-2012-1720): unspecified vulnerability fixed in 6u33 (Networking)
+     - (CVE-2012-1717): insecure temporary file permissions (JRE)
 
- -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Fri, 11 May 2012 21:11:07 +0000
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 12 Jun 2012 23:23:34 +0000
 
 sun-java6 (6.32-2) unstable; urgency=low
 
