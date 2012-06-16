@@ -1,3 +1,9 @@
+sun-java6 (6.33-2) UNRELEASED; urgency=low
+
+  * Add lintian overrides for missing binary hardening
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Sat, 16 Jun 2012 21:19:04 +0000
+
 sun-java6 (6.33-1) unstable; urgency=high
 
   * Add JCE Unlimited Strength Jurisdiction Policy Files
