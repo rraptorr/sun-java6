@@ -40,3 +40,4 @@ debian/*.desktop
 debian/*.defoma-hints
 debian/*.doc-base
 debian/*.tmp
+debian/shlibs.local
