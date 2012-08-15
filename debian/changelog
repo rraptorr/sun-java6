@@ -1,8 +1,9 @@
-sun-java6 (6.33-3) UNRELEASED; urgency=low
+sun-java6 (6.34-1) unstable; urgency=low
 
   * Fix building on lenny with lib32asound2 from lenny-backports on amd64
+  * New upstream release
 
- -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Mon, 23 Jul 2012 18:59:21 +0200
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 15 Aug 2012 21:10:57 +0000
 
 sun-java6 (6.33-2) unstable; urgency=low
 
