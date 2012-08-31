@@ -39,7 +39,7 @@ To create packages on your own:
 - apt-get install dpkg-dev
 - git clone git://github.com/rraptorr/sun-java6.git
 - cd sun-java6
-- Download jdk-6u34-linux-i586.bin and jdk-6u34-linux-x64.bin from
+- Download jdk-6u35-linux-i586.bin and jdk-6u35-linux-x64.bin from
   http://www.oracle.com/technetwork/java/javase/downloads/index.html
   (yes, both, no matter which version you will run)
 - Download jce_policy-6.zip from the same page under "Java Cryptography

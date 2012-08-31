@@ -1,3 +1,13 @@
+sun-java6 (6.35-1) unstable; urgency=high
+
+  * SECURITY UPDATE:
+     - (CVE-2012-4681): Oracle Java 7 Update 6, and possibly other versions,
+                        allows remote attackers to execute arbitrary code via a
+                        crafted applet, as exploited in the wild in
+                        August 2012 using Gondzz.class and Gondvv.class.
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Fri, 31 Aug 2012 10:59:43 +0200
+
 sun-java6 (6.34-1) unstable; urgency=low
 
   * Fix building on lenny with lib32asound2 from lenny-backports on amd64
