@@ -145,7 +145,7 @@ common_jre_things = \
 	jre/lib/audio \
 	jre/lib/cmm \
 	jre/lib/fonts \
-	jre/lib/images/cursors \
+	jre/lib/images \
 	jre/lib/oblique-fonts \
 	jre/lib/zi \
 	jre/lib/jsse.jar \
@@ -248,30 +248,6 @@ ia32-packaging-files:
 		priority=15 \
 		DEB_HOST_ARCH=i386
 
-compare-jre-jars:
-	set -e; set -- $(all_archs); src1=$$1-jdk/src; shift; \
-	jars=$$(cd i586-jdk/; find jre -name '*.jar'); \
-	for j in $$jars; do \
-	  echo =======  $$j  ========; \
-	  if [ ! -f x64-jdk/$$j ]; then \
-	    echo "file does not exist: x64-jdk/$$j"; \
-	    continue; \
-	  fi; \
-	  d=$${j%*.jar}; \
-	  rm -rf i586-jdk/$$d x64-jdk/$$d; \
-	  unzip -q -d i586-jdk/$$d i586-jdk/$$j; \
-	  unzip -q -d x64-jdk/$$d x64-jdk/$$j; \
-	  if diff -ur i586-jdk/$$d x64-jdk/$$d; then \
-	    : ; \
-	  else \
-	    badjars="$$badjars $$j"; \
-	  fi; \
-	done; \
-	if [ -n "$$badjars" ]; then \
-	  echo "Differing jar files: $$badjars"; \
-	  exit 1; \
-	fi
-
 diff_ignore = -I '^\* Monday' -I '^\* Tuesday' -I '^\* Wednesday' \
 	-I '^\* Thursday' -I '^\* Friday' -I '^\* Saturday' -I '^\* Sunday' \
 	-I '^// This file was generated AUTOMATICALLY' \
@@ -347,19 +323,20 @@ unpack-%-stamp: $(bin_pattern)
 	mv $(unpackdir) $*-jdk
 	@echo $*
 
+	diff -u $*-jdk/COPYRIGHT $*-jdk/jre/COPYRIGHT
 	diff -u $*-jdk/LICENSE $*-jdk/jre/LICENSE
 	diff -u $*-jdk/THIRDPARTYLICENSEREADME.txt \
 	    $*-jdk/jre/THIRDPARTYLICENSEREADME.txt
 
 	set -e; \
 	for i in $$(find $*-jdk -name '*.pack'); do \
-	  i586-jdk/bin/unpack200 $$i \
+	  $*-jdk/bin/unpack200 $$i \
 		$$(dirname $$i)/$$(basename $$i .pack).jar; \
 	  rm -f $$i; \
 	done
 
 	: # fix permissions
-	-find $*-jdk -name '*.properties' -o -name '*.xml' | xargs chmod 644
+	-find $*-jdk -name '*.properties' -o -name '*.xml' -o -name '*.bat' | xargs chmod 644
 
 	touch $@
 
@@ -416,8 +393,6 @@ binary-$(p_jbin):	build
 
 	: remove arch indep files and directories
 	rm -rf $(foreach i, $(common_jre_things) $(common_jre_jars), $(d_jbin)/$(basedir)/$(i))
-	: # icons, only in the i586 archive -> $(p_jre)
-	rm -rf $(d_jbin)/$(basedir)/jre/lib/images/icons
 
 	: # install a wrapper for javaws
 	mv $(d_jbin)/$(basedir)/jre/bin/javaws $(d_jbin)/$(basedir)/jre/bin/javaws.real
@@ -431,9 +406,6 @@ binary-$(p_jbin):	build
 	for i in $(d_jbin)/$(basedir)/jre/lib/management/*.template; do \
 	  mv $$i $${i%*.template}; \
 	done
-
-	: # fix permissions
-	chmod 644 $(d_jbin)/$(basedir)/jre/lib/deploy/splash.gif
 
 	: # move config files to etc/$(jdiralias) and symlink them.
 	mkdir -p $(d_jbin)/etc/$(jdiralias)/management
@@ -517,8 +489,7 @@ endif
 	  cp debian/$(basename)-$$i.mime $(d_jbin)/usr/share/mime-info/; \
 	done
 
-	: # XXX hack, the icon is not available in the amd64 package
-	cp -p i586-jdk/jre/plugin/desktop/sun_java.png \
+	cp -p $(d_jbin)/$(basedir)/jre/plugin/desktop/sun_java.png \
 		$(d_jbin)/usr/share/pixmaps/$(basename).png
 	cp -p debian/sun_java.xpm \
 		$(d_jbin)/usr/share/pixmaps/$(basename).xpm
@@ -552,9 +523,6 @@ ifeq (,$(ia32_prefix))
 else
 	echo 'libasound 2 lib32asound2' > debian/shlibs.local
 endif
-
-	 : # fix permissions
-	find $(d_jbin) -name '*.xml' | xargs -r chmod 644
 
 	rm -f $(d_jbin).substvars
 	dh_shlibdeps \
@@ -639,9 +607,6 @@ binary-$(p_jre):	build
 	set -e; \
 	tar -c -C $(srcdir) -f - $(common_jre_things) $(common_jre_jars) \
 	  | tar -x -C $(d_jre)/$(basedir) -f -
-
-	: # these are only in the i586 archive
-	cp -a i586-jdk/jre/lib/images/icons $(d_jre)/$(basedir)/jre/lib/images/
 
 	: # JCE Unlimited Strength Jurisdiction Policy
 	cp -a jce/*.jar $(d_jre)/$(basedir)/jre/lib/security/
@@ -790,7 +755,6 @@ binary-$(p_javadb):	build
 	echo usr/share/doc/$(p_javadb)/demo $(basedir)/db/demo >> $(d_javadb).links
 	echo usr/share/doc/$(p_javadb) $(basedir)/db/docs >> $(d_javadb).links
 	echo usr/share/doc/$(p_javadb)/javadoc $(basedir)/db/javadoc >> $(d_javadb).links
-	find $(d_javadb)/$(basedir)/db  -name '*.bat' -o -name '*.ksh' | xargs chmod 644
 
 
 binary-indep:	DH_OPTIONS=-i $(NO_PACKAGES)
@@ -804,10 +768,6 @@ binary-indep:	$(binary_indep_targets)
 	: # don't compress anything from the shipped demo and sample files
 	dh_compress -Xdemo -Xsample -X.html
 	dh_fixperms
-	: # remove empty directories, when all components are in place
-	for d in $$(find debian/{$(VENDOR),ia32*} -depth -type d \( ! -name plugins -o -name $(p_jdk) \) -empty 2> /dev/null); do \
-	  while rmdir $$d 2> /dev/null; do d=`dirname $$d`; done; \
-	done
 	dh_installdeb
 	dh_gencontrol
 	dh_md5sums
@@ -825,10 +785,6 @@ binary-arch:	$(binary_arch_targets)
 	: # don't compress anything from the shipped demo and sample files
 	dh_compress -Xdemo -Xexamples -Xsample -X.html -X.pdf
 	dh_fixperms
-	: # remove empty directories, when all components are in place
-	for d in $$(find debian/{$(VENDOR),ia32*} -depth -type d -name plugins -empty 2> /dev/null); do \
-	  while rmdir $$d 2> /dev/null; do d=`dirname $$d`; done; \
-	done
 	dh_installdeb
 	dh_gencontrol
 	dh_md5sums
