@@ -2,6 +2,7 @@ sun-java6 (6.35-2) UNRELEASED; urgency=low
 
   * Remove even more obsolete code
   * Fix building on 32 bit systems
+  * Add links for machine dependent include files
 
  -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Sun, 16 Sep 2012 17:57:39 +0200
 
