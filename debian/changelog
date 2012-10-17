@@ -10,12 +10,14 @@ sun-java6 (6.37-1) unstable; urgency=high
      - (CVE-2012-1533): unspecified vulnerability fixed in 6u37 (Deployment)
      - (CVE-2012-1532): unspecified vulnerability fixed in 6u37 (Deployment)
      - (CVE-2012-3143): unspecified vulnerability fixed in 6u37 (JMX)
-     - (CVE-2012-5089): RMIConnectionImpl insufficient access control checks (JMX)
+     - (CVE-2012-5089): RMIConnectionImpl insufficient access control checks
+                        (JMX)
      - (CVE-2012-5084): DefaultFormatter insufficient data validation (Swing)
      - (CVE-2012-3159): unspecified vulnerability fixed in 6u37 (Deployment)
      - (CVE-2012-5068): RhinoScriptEngine security bypass (Libraries)
      - (CVE-2012-4416): uninitialized Array JVM memory disclosure (Hotspot)
-     - (CVE-2012-5071): DescriptorSupport insufficient package access checks (JMX)
+     - (CVE-2012-5071): DescriptorSupport insufficient package access checks
+                        (JMX)
      - (CVE-2012-5069): Executors state handling issues (Concurrency)
      - (CVE-2012-5075): RMIConnectionImpl information disclosure (JMX)
      - (CVE-2012-5073): LogManager security bypass (Libraries)
