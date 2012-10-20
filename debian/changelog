@@ -1,3 +1,9 @@
+sun-java6 (6.37-2) UNRELEASED; urgency=low
+
+  * Make rules display clearly what files are missing
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Sat, 20 Oct 2012 22:00:52 +0000
+
 sun-java6 (6.37-1) unstable; urgency=high
 
   * Remove even more obsolete code
