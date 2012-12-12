@@ -1,8 +1,9 @@
-sun-java6 (6.37-2) UNRELEASED; urgency=low
+sun-java6 (6.38-1) unstable; urgency=low
 
   * Make rules display clearly what files are missing
+  * New upstream release
 
- -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Sat, 20 Oct 2012 22:00:52 +0000
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 12 Dec 2012 11:59:18 +0100
 
 sun-java6 (6.37-1) unstable; urgency=high
 
