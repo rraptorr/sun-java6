@@ -1,3 +1,42 @@
+sun-java6 (6.39-1) unstable; urgency=high
+
+  * SECURITY UPDATE:
+     - (CVE-2013-1478): unspecified vulnerability fixed in 6u39 (2D)
+     - (CVE-2013-0442): unspecified vulnerability fixed in 6u39 (AWT)
+     - (CVE-2013-0445): unspecified vulnerability fixed in 6u39 (AWT)
+     - (CVE-2013-1480): unspecified vulnerability fixed in 6u39 (AWT)
+     - (CVE-2013-0441): unspecified vulnerability fixed in 6u39 (CORBA)
+     - (CVE-2013-1475): unspecified vulnerability fixed in 6u39 (CORBA)
+     - (CVE-2013-1476): unspecified vulnerability fixed in 6u39 (CORBA)
+     - (CVE-2012-1541): unspecified vulnerability fixed in 6u39 (Deployment)
+     - (CVE-2013-0446): unspecified vulnerability fixed in 6u39 (Deployment)
+     - (CVE-2012-3342): unspecified vulnerability fixed in 6u39 (Deployment)
+     - (CVE-2013-0450): unspecified vulnerability fixed in 6u39 (JMX)
+     - (CVE-2013-1479): unspecified vulnerability fixed in 6u39 (JavaFX)
+     - (CVE-2013-0425): unspecified vulnerability fixed in 6u39 (Libraries)
+     - (CVE-2013-0426): unspecified vulnerability fixed in 6u39 (Libraries)
+     - (CVE-2013-0428): unspecified vulnerability fixed in 6u39 (Libraries)
+     - (CVE-2012-3213): unspecified vulnerability fixed in 6u39 (Scripting)
+     - (CVE-2013-1481): unspecified vulnerability fixed in 6u39 (Sound)
+     - (CVE-2013-0429): unspecified vulnerability fixed in 6u39 (CORBA)
+     - (CVE-2013-0419): unspecified vulnerability fixed in 6u39 (Deployment)
+     - (CVE-2013-0423): unspecified vulnerability fixed in 6u39 (Deployment)
+     - (CVE-2013-0351): unspecified vulnerability fixed in 6u39 (Deployment)
+     - (CVE-2013-0430): unspecified vulnerability fixed in 6u39 (Install)
+     - (CVE-2013-0432): unspecified vulnerability fixed in 6u39 (AWT)
+     - (CVE-2013-1473): unspecified vulnerability fixed in 6u39 (Deployment)
+     - (CVE-2013-0435): unspecified vulnerability fixed in 6u39 (JAX-WS)
+     - (CVE-2013-0434): unspecified vulnerability fixed in 6u39 (JAXP)
+     - (CVE-2013-0409): unspecified vulnerability fixed in 6u39 (JMX)
+     - (CVE-2013-0427): unspecified vulnerability fixed in 6u39 (Libraries)
+     - (CVE-2013-0433): unspecified vulnerability fixed in 6u39 (Networking)
+     - (CVE-2013-0424): unspecified vulnerability fixed in 6u39 (RMI)
+     - (CVE-2013-0440): unspecified vulnerability fixed in 6u39 (JSSE)
+     - (CVE-2013-0438): unspecified vulnerability fixed in 6u39 (Deployment)
+     - (CVE-2013-0443): unspecified vulnerability fixed in 6u39 (JSSE)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Sat, 02 Feb 2013 10:58:24 +0000
+
 sun-java6 (6.38-1) unstable; urgency=low
 
   * Make rules display clearly what files are missing
