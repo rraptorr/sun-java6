@@ -1,3 +1,13 @@
+sun-java6 (6.41-1) unstable; urgency=high
+
+  * Last public Java 6 release due to Java 6 reaching end of public updates
+  * SECURITY UPDATE:
+     - (CVE-2013-1487): unspecified vulnerability fixed in 6u41 (Deployment)
+     - (CVE-2013-1486): unspecified vulnerability fixed in 6u41 (JMX)
+     - (CVE-2013-0169): SSL/TLS Lucky Thirteen Attack (JSSE)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 19 Feb 2013 20:34:29 +0100
+
 sun-java6 (6.39-1) unstable; urgency=high
 
   * SECURITY UPDATE:
