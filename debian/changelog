@@ -16,7 +16,8 @@ sun-java6 (6.45-1) unstable; urgency=high
      - (CVE-2013-2422): MethodUtil trampoline class incorrect restrictions
                         (Libraries)
      - (CVE-2013-1537): remote code loading enabled by default (RMI)
-     - (CVE-2013-1557): unspecified vulnerability fixed in 6u45 (RMI)
+     - (CVE-2013-1557): LogStream.setDefaultStream() missing security
+                        restrictions (RMI)
      - (CVE-2013-2394): unspecified vulnerability fixed in 6u45 (2D)
      - (CVE-2013-2430): JPEGImageReader state corruption (ImageIO)
      - (CVE-2013-2429): JPEGImageWriter state corruption (ImageIO)
@@ -24,7 +25,8 @@ sun-java6 (6.45-1) unstable; urgency=high
      - (CVE-2013-2439): unspecified vulnerability fixed in 6u45 (Install)
      - (CVE-2013-0401): unspecified sandbox bypass (AWT)
      - (CVE-2013-2419): unspecified vulnerability fixed in 6u45 (2D)
-     - (CVE-2013-2424): unspecified vulnerability fixed in 6u45 (JMX)
+     - (CVE-2013-2424): MBeanInstantiator insufficient class access checks
+                        (JMX)
      - (CVE-2013-2417): unspecified vulnerability fixed in 6u45 (Networking)
      - (CVE-2013-2418): unspecified vulnerability fixed in 6u45 (Deployment)
      - (CVE-2013-2433): unspecified vulnerability fixed in 6u45 (Deployment)
