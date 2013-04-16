@@ -1,6 +1,39 @@
-sun-java6 (6.43-1) unstable; urgency=high
+sun-java6 (6.45-1) unstable; urgency=high
 
   * Last public Java 6 release due to Java 6 reaching end of public updates
+  * SECURITY UPDATE:
+     - (CVE-2013-2383): font layout and glyph table errors (2D)
+     - (CVE-2013-2384): font layout and glyph table errors (2D)
+     - (CVE-2013-1569): font layout and glyph table errors (2D)
+     - (CVE-2013-2432): unspecified vulnerability fixed in 6u45 (2D)
+     - (CVE-2013-2420): image processing vulnerability (2D)
+     - (CVE-2013-1491): unspecified sanbox bypass (2D)
+     - (CVE-2013-1558): java.beans.ThreadGroupContext missing restrictions
+                        (Beans)
+     - (CVE-2013-2440): unspecified vulnerability fixed in 6u45 (Deployment)
+     - (CVE-2013-2435): unspecified vulnerability fixed in 6u45 (Deployment)
+     - (CVE-2013-1518): JAXP missing security restrictions (JAXP)
+     - (CVE-2013-2422): MethodUtil trampoline class incorrect restrictions
+                        (Libraries)
+     - (CVE-2013-1537): remote code loading enabled by default (RMI)
+     - (CVE-2013-1557): unspecified vulnerability fixed in 6u45 (RMI)
+     - (CVE-2013-2394): unspecified vulnerability fixed in 6u45 (2D)
+     - (CVE-2013-2430): JPEGImageReader state corruption (ImageIO)
+     - (CVE-2013-2429): JPEGImageWriter state corruption (ImageIO)
+     - (CVE-2013-1563): unspecified vulnerability fixed in 6u45 (Install)
+     - (CVE-2013-2439): unspecified vulnerability fixed in 6u45 (Install)
+     - (CVE-2013-0401): unspecified sandbox bypass (AWT)
+     - (CVE-2013-2419): unspecified vulnerability fixed in 6u45 (2D)
+     - (CVE-2013-2424): unspecified vulnerability fixed in 6u45 (JMX)
+     - (CVE-2013-2417): unspecified vulnerability fixed in 6u45 (Networking)
+     - (CVE-2013-2418): unspecified vulnerability fixed in 6u45 (Deployment)
+     - (CVE-2013-2433): unspecified vulnerability fixed in 6u45 (Deployment)
+     - (CVE-2013-1540): unspecified vulnerability fixed in 6u45 (Deployment)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 16 Apr 2013 23:33:16 +0200
+
+sun-java6 (6.43-1) unstable; urgency=high
+
   * SECURITY UPDATE:
      - (CVE-2013-0809): unspecified vulnerability fixed in 6u43 (2D)
      - (CVE-2013-1493): unspecified vulnerability fixed in 6u43 (2D)
