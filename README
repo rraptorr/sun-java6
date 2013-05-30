@@ -48,6 +48,8 @@ To create packages on your own:
   (yes, both, no matter which version you will run)
 - Download jce_policy-6.zip from the same page under "Java Cryptography
   Extension (JCE) Unlimited Strength Jurisdiction Policy Files 6"
+- on multiarch amd64 systems (Wheezy) one must add i386 architecture:
+  dpkg --add-architecture i386 && apt-get update
 - dpkg-buildpackage -uc -us
 - install any missing packages that dpkg-buildpackage complains about
   and repeat
