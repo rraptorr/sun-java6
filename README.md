@@ -49,7 +49,7 @@ To create packages on your own:
 - git clone git://github.com/rraptorr/sun-java6.git
 - cd sun-java6
 - download jdk-6u45-linux-i586.bin and jdk-6u45-linux-x64.bin from
-  <http://www.oracle.com/technetwork/java/javase/downloads/index.html>
+  <http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-javase6-419409.html>
   (yes, both, no matter which version you will run)
 - download jce_policy-6.zip from the same page under "Java
   Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy
