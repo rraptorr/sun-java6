@@ -51,9 +51,8 @@ To create packages on your own:
 - download jdk-6u45-linux-i586.bin and jdk-6u45-linux-x64.bin from
   <http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-javase6-419409.html>
   (yes, both, no matter which version you will run)
-- download jce_policy-6.zip from the same page under "Java
-  Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy
-  Files 6"
+- download jce_policy-6.zip from
+  <http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html>
 - on multiarch amd64 systems (Wheezy) one must add i386 architecture:
   dpkg --add-architecture i386 && apt-get update
 - dpkg-buildpackage -uc -us
