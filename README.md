@@ -66,9 +66,3 @@ probably illegal (at least in some parts of the world).
 On the other hand, this repository contains only scripts, that allows
 one to repackage Oracle Java in Debian friendly way. No binaries are
 or will be hosted.
-
-Thanks
-------
-
-If this saved you some time you can thank me with some bitcoins:
-1java6fKwMJs6Ay6xntBUKtCbGa9Qj9jE
